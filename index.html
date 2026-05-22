@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>First Tailwind Project</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    
+        <h1 class="font-bold text-xl text-white">YourName 🚀</h1>
+    
+        <!-- Desktop -->
+        <div class="hidden md:flex gap-8 text-sm text-gray-200">
+          <a href="#home" class="hover:text-blue-400">Home</a>
+          <a href="#about" class="hover:text-blue-400">About</a>
+          <a href="#projects" class="hover:text-blue-400">Projects</a>
+          <a href="#contact" class="hover:text-blue-400">Contact</a>
+        </div>
+    
+        
+        <!-- Mobile Button -->
+        <button onclick="toggleMenu()" class="md:hidden text-white text-2xl">
+          ☰
+        </button>
+    
+      </div>
+    
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 px-6 pb-6 text-gray-200 bg-black/80">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <button class="bg-blue-600 px-4 py-2 rounded-lg w-fit">Hire Me</button>
+      </div>
+    </nav>
+    
+    <!-- HERO -->
+    <section id="home">
+    
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="pic-one.png"
+          class="w-72 sm:w-96 md:w-full rounded-2xl shadow-2xl border border-white/10 hover:scale-105 transition">
+      </div>
+    
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          Hi, I'm [Your Name] 🚀
+        </h2>
+    
+        <p class="text-gray-300 mt-4 mb-6 leading-relaxed text-sm sm:text-base">
+          I'm passionate about [your main skill or profession]. I enjoy working on [type of projects]
+          and love exploring [your interests or hobbies].
+        </p>
+    
+        <div class="flex gap-4 flex-wrap justify-center md:justify-start">
+          <button class="bg-blue-600 px-5 py-2 rounded-lg">
+            View My Work
+          </button>
+          <button class="border border-white/20 px-5 py-2 rounded-lg">
+            Get In Touch
+          </button>
+        </div>
+      </div>
+    
+    </section>
+    
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="text-center text-3xl font-bold mb-10">My Projects</h2>
+    
+      <div class="max-w-4xl mx-auto relative overflow-hidden">
+    
+        <div id="carousel" class="flex transition-transform duration-500">
+    
+          <div class="min-w-full p-6">
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+              <h3 class="font-bold text-xl">[Project Title 1]</h3>
+              <p class="text-gray-400">Short description of the project</p>
+            </div>
+          </div>
+    
+          <div class="min-w-full p-6">
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+              <h3 class="font-bold text-xl">[Project Title 2]</h3>
+              <p class="text-gray-400">Short description of the project</p>
+            </div>
+          </div>
+    
+          <div class="min-w-full p-6">
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+              <h3 class="font-bold text-xl">[Project Title 3]</h3>
+              <p class="text-gray-400">Short description of the project</p>
+            </div>
+          </div>
+    
+        </div>
+    
+        <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-600 px-3 py-2 rounded-full">‹</button>
+        <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 px-3 py-2 rounded-full">›</button>
+    
+      </div>
+    </section>
+    
+    <!-- INTERESTS -->
+    <section id="interests">
+      <h2 class="text-center text-3xl font-bold mb-10">My Interests</h2>
+    
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+        <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+          ⚡ [Interest / Hobby 1]
+        </div>
+    
+        <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+          🧠 [Interest / Hobby 2]
+        </div>
+    
+        <div class="bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+          🚀 [Interest / Hobby 3]
+        </div>
+    
+      </div>
+    </section>
+    
+    <!-- ABOUT -->
+    <section id="about">
+    
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold">What I Do</h2>
+        <p class="text-gray-400 mt-3">
+          A mix of my experience, skills, and what I enjoy working on.
+        </p>
+      </div>
+    
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+        <div class="glow-card bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+          <div class="text-3xl mb-4">💻</div>
+          <h3 class="text-xl font-semibold mb-2">[Skill / Strength 1]</h3>
+          <p class="text-gray-400 text-sm">
+            Describe your experience or what you do in this area.
+          </p>
+        </div>
+    
+        <div class="glow-card bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+          <div class="text-3xl mb-4">🎓</div>
+          <h3 class="text-xl font-semibold mb-2">[Skill / Strength 2]</h3>
+          <p class="text-gray-400 text-sm">
+            Describe your experience or what you do in this area.
+          </p>
+        </div>
+    
+        <div class="glow-card bg-white/5 border border-white/10 p-8 rounded-2xl text-center">
+          <div class="text-3xl mb-4">🚀</div>
+          <h3 class="text-xl font-semibold mb-2">[Skill / Strength 3]</h3>
+          <p class="text-gray-400 text-sm">
+            Describe your experience or what you do in this area.
+          </p>
+        </div>
+    
+      </div>
+    
+    </section>
+    
+    <!-- CONTACT / ABOUT ME -->
+    <section id="contact">
+      
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold mb-3">About Me</h1>
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          Write a short introduction about yourself and what you enjoy doing.
+        </p>
+      </div>
+    
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        
+        <div class="flex justify-center">
+          <img 
+            src="pic-two.png" 
+            class="w-64 h-64 object-cover rounded-2xl shadow-lg border border-gray-700"
+          />
+        </div>
+    
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800">
+          <h2 class="text-2xl font-semibold mb-3">More About Me</h2>
+          <p class="text-gray-300 mb-4">
+            Share more details about your background, hobbies, or goals.
+          </p>
+    
+          <button class="bg-blue-600 hover:bg-blue-700 transition px-4 py-2 rounded-lg font-semibold">
+            Contact Me
+          </button>
+        </div>
+    
+      </div>
+    
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+    
+        <div>
+          <h3 class="text-white font-bold mb-2">[Your Name]</h3>
+          <p>Doing what I love and building meaningful things.</p>
+        </div>
+    
+        <div>
+          <h3 class="text-white font-bold mb-2">Links</h3>
+          <p>Home / Projects / About / Contact</p>
+        </div>
+    
+        <div>
+          <h3 class="text-white font-bold mb-2">Contact</h3>
+          <p>[your-email@email.com]</p>
+        </div>
+    
+      </div>
+    </footer>
+    
+</body>
+</html>
